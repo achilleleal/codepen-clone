@@ -12,11 +12,11 @@ function App() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(`
-      <html>
-        <body>${html}</body>
-        <style>${css}</style>
-        <style>${js}</style>
-      </html>
+        <html>
+          <body>${html}</body>
+          <style>${css}</style>
+          <script>${js}</script>
+        </html>
       `)
     }, 250)
 
@@ -35,14 +35,14 @@ function App() {
         <Editor 
           lang="css" 
           title="CSS" 
-          value={js} 
-          onChange={setJs}
+          value={css} 
+          onChange={setCss}
         />
         <Editor 
           lang="javascript" 
           title="JS" 
-          value={css} 
-          onChange={setCss}
+          value={js} 
+          onChange={setJs}
         />
       </div>
       <div className="pane">
